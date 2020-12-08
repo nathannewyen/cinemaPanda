@@ -1,0 +1,36 @@
+@model User
+
+<div class="card">
+    <div class="card-header">Register</div>
+    <div class="card-body">
+        <form action="/register" method="post">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm">Confirm Password:</label>
+                        <input type="text" asp-for="Confirm" class="form-control" />
+                        <span asp-validation-for="Confirm" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="btn bg-primary text-light" value="Register">
+        </form>
+    </div>
+</div>
